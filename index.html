@@ -7,6 +7,85 @@
     <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Kalkulator Konversi Suhu</h1>
+        <hr/>
+    </header>
+
+    <main>
+        <!-- Form konten -->
+        <section>
+            
+            <!--Instruksi-->
+            <article>
+                <p>Masukkan suhu derajat Celcius (°C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).<p>
+            </article>
+
+            <!--Inputan Suhu-->
+            <form class="padding-area">
+                <div>
+                    <label for="input-suhu">Celcius (°C) :</label>
+                </div>
+            
+                <textarea id="input-suhu"></textarea>
+
+                <div>
+                    <button class="form-button form-button-submit">Konversi</button>
+                    <button class="form-button form-button-reset">Reset</button>
+                    <button class="form-button form-button-reverse">Reverse</button>
+                </div>
+            </form>
+
+            <!--Hasil Suhu-->
+            <div class="padding-area">
+                <div>
+                    <label for="hasil-suhu">Fahrenheit (°F) :</label>
+                </div>
+            
+                <textarea id="hasil-suhu"></textarea>
+            </div>
+
+            <!--Cara Kalkulasi-->
+            <div class="padding-area">
+                <div>
+                    <label for="kalkulasi-suhu">Cara Kalkulasi :</label>
+                </div>
+            
+                <textarea id="kalkulasi-suhu"></textarea>
+                
+            </div>
+        </section>
+
+        <!-- Info konten -->
+        <section>
+            <header>
+                <h2>Cara Konversi Celcius (°C) Ke Fahrenheit (°F)</h2>
+                <hr/>
+            </header>
+
+            <article>
+                <p>Suhu 
+                    <span class="suhu-style">S</span> dalam derajat Fahrenheit (°F) sama dengan suhu 
+                    <span class="suhu-style">S</span> dalam derajat Celcius (°C) kali 9/2 tambah 32.
+                </p>
+                
+                <p>
+                    <span class="suhu-style">S</span><sub>(°F)</sub>=
+                    (<span class="suhu-style">S</span><sub>(°C)</sub>x 9/5)+32
+                </p>
+
+                <p>atau</p>
+
+                <p>
+                    <span class="suhu-style">S</span><sub>(°F)</sub>=
+                    (<span class="suhu-style">S</span><sub>(°C)</sub>x 1.8)+32
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>@Made by turnymous</p>
+    </footer>
 </body>
 </html>
