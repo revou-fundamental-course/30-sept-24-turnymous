@@ -1,91 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
-</head>
-<body>
-    <header>
-        <h1>Kalkulator Konversi Suhu</h1>
-        <hr/>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
 
-    <main>
-        <!-- Form konten -->
+      <!-- HEADER -->
+      <header>
+        <div class="judul">
+          <div class="title">
+            <h1>Temperature Converter</h1>
+            <span class="Temperature-icon"
+              ><i class="fa-solid fa-temperature-three-quarters"></i
+            ></span>
+          </div>
+        </div>
+      </header>
+      <br />
+      <!-- HEADER END -->
+
+      <main>
+        <!-- INSTRUKSI -->
         <section>
-            
-            <!--Instruksi-->
-            <article>
-                <p>Masukkan suhu derajat Celcius (°C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).<p>
-            </article>
+          <article>
+            <p class="text-color">
+              Masukkan suhu derajat Celcius (°C) ke kotak dibawah, lalu klik
+              tombol konversi untuk mendapatkan hasil konversi dalam bentuk
+              Fahrenheit (°F).
+            </p>
+          </article>
+          <br />
+          <!-- INSTRUKSI END -->
 
-            <!--Inputan Suhu-->
-            <form class="padding-area">
-                <div>
-                    <label for="input-suhu">Celcius (°C) :</label>
-                </div>
-            
-                <textarea id="input-suhu"></textarea>
-
-                <div>
-                    <button class="form-button form-button-submit">Konversi</button>
-                    <button class="form-button form-button-reset">Reset</button>
-                    <button class="form-button form-button-reverse">Reverse</button>
-                </div>
-            </form>
-
-            <!--Hasil Suhu-->
-            <div class="padding-area">
-                <div>
-                    <label for="hasil-suhu">Fahrenheit (°F) :</label>
-                </div>
-            
-                <textarea id="hasil-suhu"></textarea>
+          <!-- FORM INPUT -->
+          <form class="padding-area">
+            <div id="celcius" class="text-color">
+              <label for="input-suhu">Celcius (°C) :</label>
             </div>
+  
+            <input type="number" id="input-suhu" class="input-suhu" required></input>
+          </form>
+          <!-- FORM INPUT END -->
 
-            <!--Cara Kalkulasi-->
-            <div class="padding-area">
-                <div>
-                    <label for="kalkulasi-suhu">Cara Kalkulasi :</label>
-                </div>
-            
-                <textarea id="kalkulasi-suhu"></textarea>
-                
+          <!-- TOMBOL INPUT/OUTPUT -->
+          <div>
+            <!-- TOMBOL SUBMIT -->
+            <button
+              type="button"
+              onclick="validateForm()"
+              class="form-button form-button-submit">Konversi
+            </button>
+
+            <!-- TOMBOL RESET -->
+            <button 
+              type="button" 
+              onclick="reset()"
+              class="form-button form-button-reset">Reset
+            </button>
+
+            <!-- TOMBOL REVERSE -->
+            <button 
+              type="button" 
+              onclick="reverse()" 
+              class="form-button form-button-reverse">Reverse
+            </button>
+          </div>
+          <br />
+          <!-- TOMBOL INPUT/OUTPUT END -->
+
+          <!-- TEXT AREA -->
+          <div class="padding-area">
+            <div id="fahrenheit" class="text-color">
+              <label for="hasil-suhu">Fahrenheit (°F) :</label>
             </div>
+            <textarea id="hasil-suhu" readonly></textarea>
+          </div>
+
+          <div id="padding-area" class="text-color">
+            <div>
+              <label for="kalkulasi-suhu">Cara Kalkulasi :</label>
+            </div>
+            <textarea id="kalkulasi-suhu" readonly></textarea>
+          </div>
+          <!-- TEX AREA END -->
         </section>
 
-        <!-- Info konten -->
         <section>
-            <header>
-                <h2>Cara Konversi Celcius (°C) Ke Fahrenheit (°F)</h2>
-                <hr/>
-            </header>
+          <!-- HEADER CARA KALKULASI -->
+          <header>
+            <h2
+              style="font-size: 27px"
+              class="text-color"
+              style="font-family: candara">Cara Konversi Celcius (°C) Ke Fahrenheit (°F) :
+            </h2>
+            <hr />
+          </header>
+          <br />
+          <!-- HEADER CARA KALKULASI END -->
 
-            <article>
-                <p>Suhu 
-                    <span class="suhu-style">S</span> dalam derajat Fahrenheit (°F) sama dengan suhu 
-                    <span class="suhu-style">S</span> dalam derajat Celcius (°C) kali 9/2 tambah 32.
-                </p>
-                
-                <p>
-                    <span class="suhu-style">S</span><sub>(°F)</sub>=
-                    (<span class="suhu-style">S</span><sub>(°C)</sub>x 9/5)+32
-                </p>
-
-                <p>atau</p>
-
-                <p>
-                    <span class="suhu-style">S</span><sub>(°F)</sub>=
-                    (<span class="suhu-style">S</span><sub>(°C)</sub>x 1.8)+32
-                </p>
-            </article>
+          <!-- CARA KALKULASI -->
+          <article class="text-color">
+            <p>
+              Suhu <span class="suhu-style">S</span> dalam derajat Fahrenheit
+              (°F) sama dengan suhu <span class="suhu-style">S</span> dalam
+              derajat Celcius (°C) kali 9/5 tambah 32.
+            </p>
+            <p>
+              <span class="suhu-style">- S</span><sub>(°F)</sub>= (<span
+                class="suhu-style"
+                >S</span
+              ><sub>(°C)</sub>x 9/5)+32
+            </p>
+            <p>atau</p>
+            <p>
+              <span class="suhu-style">- S</span><sub>(°F)</sub>= (<span
+                class="suhu-style"
+                >S</span
+              ><sub>(°C)</sub>x 1.8)+32
+            </p>
+          </article>
+          <!-- CARA KALKULASI END -->
         </section>
-    </main>
+      </main>
+      <br />
 
-    <footer>
-        <p>@Made by turnymous</p>
-    </footer>
-</body>
+      <!-- FOOTER -->
+      <footer style="font-size: 12px">
+        <p class="text-color" style="text-align: center">Made by @turnymous</p>
+      </footer>
+      <!-- FOOTER END -->
+       
+    </div>
+    <script src="js\script.js"></script>
+  </body>
 </html>

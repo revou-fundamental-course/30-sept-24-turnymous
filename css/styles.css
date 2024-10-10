@@ -1,57 +1,115 @@
 /* ini css */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    background: seashell;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  background: #002433;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.judul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+}
+
+h1 {
+  color: #fff;
+  letter-spacing: 1.2px;
+  font-size: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.Temperature-icon {
+  font-size: 45px;
+  color: white;
 }
 
 .suhu-style {
-    font-size: 20px;
-    font-family: math;
-    font-style: italic;
+  font-size: 20px;
+  font-family: math;
+  font-style: italic;
 }
 
-.padding-area {
-    padding-top: 15px;
-    padding-bottom: 15px;
+#padding-area {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .form-button {
-    background-color: green;
-    color: white;
-    border: 0;
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: green;
+  color: white;
+  border: 0;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 12px 16px 0 rgba(202, 180, 180, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .form-button:hover {
-    background-color: #04AA6D; /* Green */
-    color: white;
+  background-color: green;
+  color: white;
 }
 
 .form-button-reset:hover {
-    background-color: hsl(0, 100%, 67%); /* Green */
-    color: white;
+  background-color: hsl(0, 100%, 50%);
+  color: white;
+}
+
+.form-button-reverse:hover {
+  background-color: hsl(0, 100%, 100%);
+  color: black;
 }
 
 .form-button-submit {
-    background-color: green;
-    color: white;
+  background-color: rgb(188, 186, 186);
+  color: black;
 }
 
 .form-button-reset {
-    background-color: red;
-    color: white;
+  background-color: crimson;
+  color: white;
 }
 
 .form-button-reverse {
-    background-color: green;
-    color: white;
+  background-color: lightseagreen;
+  color: white;
 }
 
 textarea {
@@ -64,4 +122,9 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+}
+
+.text-color {
+  color: white;
+  font-family: perpetua;
 }
