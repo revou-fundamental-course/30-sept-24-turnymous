@@ -15,15 +15,14 @@
   </head>
   <body>
     <div class="container">
-
       <!-- HEADER -->
       <header>
         <div class="judul">
           <div class="title">
             <h1>Temperature Converter</h1>
-            <span class="Temperature-icon"
-              ><i class="fa-solid fa-temperature-three-quarters"></i
-            ></span>
+            <span class="Temperature-icon">
+              <i class="fa-solid fa-temperature-three-quarters"></i>
+            </span>
           </div>
         </div>
       </header>
@@ -48,8 +47,7 @@
             <div id="celcius" class="text-color">
               <label for="input-suhu">Celcius (°C) :</label>
             </div>
-  
-            <input type="number" id="input-suhu" class="input-suhu" required></input>
+            <input type="number" id="input-suhu" class="input-suhu" required />
           </form>
           <!-- FORM INPUT END -->
 
@@ -59,21 +57,23 @@
             <button
               type="button"
               onclick="validateForm()"
-              class="form-button form-button-submit">Konversi
+              class="form-button form-button-submit"
+            >
+              Konversi
             </button>
 
             <!-- TOMBOL RESET -->
-            <button 
-              type="button" 
+            <button
+              type="button"
               onclick="reset()"
-              class="form-button form-button-reset">Reset
+              class="form-button form-button-reset"
+            >
+              Reset
             </button>
 
             <!-- TOMBOL REVERSE -->
-            <button 
-              type="button" 
-              onclick="reverse()" 
-              class="form-button form-button-reverse">Reverse
+            <button type="button" class="form-button form-button-reverse">
+              Reverse
             </button>
           </div>
           <br />
@@ -87,22 +87,23 @@
             <textarea id="hasil-suhu" readonly></textarea>
           </div>
 
-          <div id="padding-area" class="text-color">
+          <div class="padding-area text-color">
             <div>
               <label for="kalkulasi-suhu">Cara Kalkulasi :</label>
             </div>
             <textarea id="kalkulasi-suhu" readonly></textarea>
           </div>
-          <!-- TEX AREA END -->
+          <!-- TEXT AREA END -->
         </section>
 
         <section>
           <!-- HEADER CARA KALKULASI -->
           <header>
             <h2
-              style="font-size: 27px"
               class="text-color"
-              style="font-family: candara">Cara Konversi Celcius (°C) Ke Fahrenheit (°F) :
+              style="font-size: 27px; font-family: candara"
+            >
+              Cara Konversi Celcius (°C) Ke Fahrenheit (°F) :
             </h2>
             <hr />
           </header>
@@ -117,17 +118,13 @@
               derajat Celcius (°C) kali 9/5 tambah 32.
             </p>
             <p>
-              <span class="suhu-style">- S</span><sub>(°F)</sub>= (<span
-                class="suhu-style"
-                >S</span
-              ><sub>(°C)</sub>x 9/5)+32
+              <span class="suhu-style">- S</span><sub>(°F)</sub> = (
+              <span class="suhu-style">S</span><sub>(°C)</sub> x 9/5) + 32
             </p>
             <p>atau</p>
             <p>
-              <span class="suhu-style">- S</span><sub>(°F)</sub>= (<span
-                class="suhu-style"
-                >S</span
-              ><sub>(°C)</sub>x 1.8)+32
+              <span class="suhu-style">- S</span><sub>(°F)</sub> = (
+              <span class="suhu-style">S</span><sub>(°C)</sub> x 1.8) + 32
             </p>
           </article>
           <!-- CARA KALKULASI END -->
@@ -140,8 +137,7 @@
         <p class="text-color" style="text-align: center">Made by @turnymous</p>
       </footer>
       <!-- FOOTER END -->
-       
     </div>
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
