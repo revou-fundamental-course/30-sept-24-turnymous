@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="container">
@@ -33,7 +34,7 @@
         <!-- INSTRUKSI -->
         <section>
           <article>
-            <p class="text-color">
+            <p class="text-color" id="instruction">
               Masukkan suhu derajat Celcius (°C) ke kotak dibawah, lalu klik
               tombol konversi untuk mendapatkan hasil konversi dalam bentuk
               Fahrenheit (°F).
@@ -45,18 +46,27 @@
           <!-- FORM INPUT -->
           <form class="padding-area">
             <div id="celcius" class="text-color">
-              <label for="input-suhu">Celcius (°C) :</label>
+              <label for="input-suhu" id="input-label">Celcius (°C) :</label>
             </div>
             <input type="number" id="input-suhu" class="input-suhu" required />
           </form>
           <!-- FORM INPUT END -->
+
+          <!-- ALERT! -->
+          <div id="custom-alert" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeCustomAlert()">&times;</span>
+              <p id="alert-message"></p>
+            </div>
+          </div>
+          <!-- ALERT END! -->
 
           <!-- TOMBOL INPUT/OUTPUT -->
           <div>
             <!-- TOMBOL SUBMIT -->
             <button
               type="button"
-              onclick="validateForm()"
+              onclick="convertTemperature()"
               class="form-button form-button-submit"
             >
               Konversi
@@ -72,7 +82,11 @@
             </button>
 
             <!-- TOMBOL REVERSE -->
-            <button type="button" class="form-button form-button-reverse">
+            <button
+              type="button"
+              onclick="reverseConversion()"
+              class="form-button form-button-reverse"
+            >
               Reverse
             </button>
           </div>
@@ -110,7 +124,7 @@
           <br />
           <!-- HEADER CARA KALKULASI END -->
 
-          <!-- CARA KALKULASI -->
+          <!-- CARA KALKULASI CELCIUS KE FAHRENHEIT -->
           <article class="text-color">
             <p>
               Suhu <span class="suhu-style">S</span> dalam derajat Fahrenheit
@@ -125,6 +139,33 @@
             <p>
               <span class="suhu-style">- S</span><sub>(°F)</sub> = (
               <span class="suhu-style">S</span><sub>(°C)</sub> x 1.8) + 32
+            </p>
+          </article>
+          <!-- CARA KALKULASI CELCIUS KE FAHRENHEIT END -->
+
+          <!-- HEADER CARA KALKULASI FAHRENHEIT KE CELCIUS -->
+          <header>
+            <h2
+              class="text-color"
+              style="font-size: 27px; font-family: candara"
+            >
+              Cara Konversi Fahrenheit (°F) Ke Celcius (°C) :
+            </h2>
+            <hr />
+          </header>
+          <br />
+          <!-- HEADER CARA KALKULASI END -->
+
+          <!-- CARA KALKULASI FAHRENHEIT KE CELCIUS -->
+          <article class="text-color">
+            <p>
+              Suhu <span class="suhu-style">S</span> dalam derajat Celcius (°C)
+              sama dengan suhu <span class="suhu-style">S</span> dalam derajat
+              Fahrenheit (°F) dikurangi 32 dikali 5/9.
+            </p>
+            <p>
+              <span class="suhu-style">- S</span><sub>(°C)</sub> = (
+              <span class="suhu-style">S</span><sub>(°F)</sub> - 32) x 5/9
             </p>
           </article>
           <!-- CARA KALKULASI END -->
